@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: vision-heavy;
+    src: url(../assets/font/Vision-Heavy.otf);
+}
+
+@font-face {
+    font-family: bariol;
+    src: url(../assets/font/Bariol_Regular.otf);
+}
+
+:root {
+    --container-bg-color: #11131c;
+    --header-bg-color: linear-gradient(to right, #c8db2b , #268f3a);
+    --balance-bg-color: #1d2130;
+    --confiance-bg-color: #1d2130;
+    --text-color: #ffffff;
+    --username-color: #a9cc2e;
+    --currency-color: #e1e0e0;
+    --money-color: #28903a;
+    --btn-deposit-color: #1d2130;
+    --btn-withdraw-color: #1d2130;
+    --btn-transfer-color: #1d2130;
+    --modal-bg-color: #11131c;
+    --modal-btn-bg-color: linear-gradient(to right, #c8db2b , #268f3a);
+    --modal-text-color: #ffffff;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-image: url("https://i.imgur.com/3pzRj9n.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: var(--container-bg-color);
+    color: var(--text-color);
+    width: 950px;
+    height: 550px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-bg-color);
+    padding: 10px 20px;
+    width: 100%;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.cont-p-1, .cont-p-2, .cont-p-3 {
+    position: absolute;
+}
+
+.cont-p-1 {
+    transform: rotate(-11deg);
+    left: -150px;
+    top: 10px;
+}
+
+.parale-1 {
+    width: 300px;
+    height: 80px;
+    transform: skew(33deg);
+    background: white;
+    opacity: 0.2;
+}
+
+.cont-p-2 {
+    transform: rotate(-10deg);
+    left: 250px;
+    top: 10px;
+}
+
+.parale-2 {
+    width: 300px;
+    height: 80px;
+    transform: skew(33deg);
+    background: white;
+    opacity: 0.2;
+}
+
+.cont-p-3 {
+    transform: rotate(-10deg);
+    right: -50px;
+    top: 10px;
+}
+
+.parale-3 {
+    width: 150px;
+    height: 60px;
+    transform: skew(33deg);
+    background: white;
+    opacity: 0.2;
+}
+
+.logo {
+    height: 32px;
+    width: 108px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+    margin-right: 30px;
+}
+
+.close-btn:hover {
+    transform: scale(1.2);
+}
+
+.balance {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    width: 403px;
+    height: 183px;
+    background: var(--balance-bg-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 40px;
+    background-image: url(../assets/img/curve.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.balance-content {
+    position: absolute;
+    top: 10px;
+}
+
+.balance-content .username {
+    font-size: 25px;
+    color: var(--username-color);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.balance-content .currency {
+    font-size: 60px;
+    color: var(--currency-color);
+    font-family: "vision-heavy", sans-serif;
+}
+
+.balance-content .currency .money {
+    color: var(--money-color);
+}
+
+.actions {
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.action-btn {
+    width: 100%;
+    height: 75px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+    opacity: 0.8;
+}
+
+.action-btn span.icon {
+    position: absolute;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.1);
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%) rotate(15deg);
+    pointer-events: none;
+}
+
+.deposit {
+    background-color: var(--btn-deposit-color);
+}
+
+.withdraw {
+    background-color: var(--btn-withdraw-color);
+}
+
+.transfer {
+    background-color: var(--btn-transfer-color);
+}
+
+.confiance {
+    position: absolute;
+    width: 360px;
+    height: 100px;
+    background: var(--confiance-bg-color);
+    border-radius: 8px;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.confiance p {
+    flex: 1;
+    color: #7e7e7e;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.confiance p span {
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.circle-confiance {
+    width: 95px;
+    height: 95px;
+    background-image: url(../assets/img/circle.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+}
+
+.bank-card {
+    position: absolute;
+    width: 285px;
+    height: 135px;
+    background: url('../assets/img/bank-card.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 16px;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.bank-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.card-number {
+    font-size: 18px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    letter-spacing: 2px;
+}
+
+.bank-logo img {
+    width: 90px;
+    height: 30px;
+    padding: -1px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none !important;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--modal-bg-color);
+    color: var(--modal-text-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    border: 1px solid #268f3a;
+}
+
+.modal-content h2 {
+    margin: 0 0 20px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-content input {
+    padding: 10px;
+    background: #1d2130;
+    color: var(--modal-text-color);
+    border: 1px solid #268f3a;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.modal-content input:hover {
+    border-color: #268f3a;
+    box-shadow: 0 0 10px rgba(38, 143, 58, 0.4);
+}
+
+.modal-content input:focus {
+    border-color: #268f3a;
+    outline: none;
+    box-shadow: 0 0 10px rgba(38, 143, 58, 0.6);
+}
+
+.modal-content button {
+    padding: 10px;
+    background: var(--modal-btn-bg-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    opacity: 0.8;
+}
+
+.close-btn-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--modal-text-color);
+}

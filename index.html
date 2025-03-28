@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusti Template Banking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="cont-p-1">
+				<div class="parale-1 "></div>
+			</div>
+			<div class="cont-p-2">
+				<div class="parale-2"></div>
+			</div>
+			<div class="cont-p-3">
+				<div class="parale-3"></div>
+			</div>
+            <div class="logo">
+                <img src="assets/img/logo-header.png" alt="Logo" class="logo">
+            </div>
+            <button class="close-btn">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+
+        <div class="balance">
+            <div class="balance-content">
+                <p>Welcome<br>
+                    <span class="username">Gusti Agung</span><br>
+                    Account Balance :<br>
+                    <span class="currency">$<span class="money">5000</span></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="action-btn deposit" onclick="openModal('deposit')">
+                <i class="far fa-money-bill-alt"></i>
+                <span class="far fa-money-bill-alt icon"></span>
+                Deposit
+            </button>
+            <button class="action-btn withdraw" onclick="openModal('withdraw')">
+                <i class="far fa-credit-card"></i>
+                <span class="far fa-credit-card icon"></span>
+                Withdraw
+            </button>
+            <button class="action-btn transfer" onclick="openModal('transfer')">
+                <i class="fas fa-exchange-alt"></i>
+                <span class="fas fa-exchange-alt icon"></span>
+                Transfer
+            </button>
+        </div>
+
+        <div class="confiance">
+            <p>
+                <span>You trust us!</span><br>
+                The number of accounts has increased by 7% since 2024
+            </p>
+            <div class="circle-confiance"></div>
+        </div>
+
+        <div class="bank-card">
+            <div class="card-details">
+                <div class="bank-name">FLEECA</div><br><br>
+                <div class="card-number">**** **** **** 1234</div>
+            </div>
+            <div class="bank-logo">
+                <img src="assets/img/logo-bank.png" alt="Bank Logo">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-deposit">
+        <div class="modal-content">
+            <span class="close-btn-modal" onclick="closeModal('deposit')"><i class="fas fa-sign-out-alt"></i></span>
+            <h2>Deposit</h2>
+            <form>
+                <label for="depositAmount">Enter Amount:</label>
+                <input type="number" id="depositAmount" placeholder="$0" required>
+                <button type="submit">Deposit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-withdraw">
+        <div class="modal-content">
+            <span class="close-btn-modal" onclick="closeModal('withdraw')"><i class="fas fa-sign-out-alt"></i></span>
+            <h2>Withdraw</h2>
+            <form>
+                <label for="withdrawAmount">Enter Amount:</label>
+                <input type="number" id="withdrawAmount" placeholder="$0" required>
+                <button type="submit">Withdraw</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Transfer Modal -->
+    <div class="modal" id="modal-transfer">
+        <div class="modal-content">
+            <span class="close-btn-modal" onclick="closeModal('transfer')"><i class="fas fa-sign-out-alt"></i></span>
+            <h2>Transfer</h2>
+            <form>
+                <label for="transferId">Recipient ID:</label>
+                <input type="number" id="transferId" placeholder="Enter ID player" required>
+                <label for="transferAmount">Enter Amount:</label>
+                <input type="number" id="transferAmount" placeholder="$0" required>
+                <button type="submit">Transfer</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
